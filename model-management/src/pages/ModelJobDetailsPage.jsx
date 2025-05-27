@@ -18,12 +18,9 @@ export default function ModelJobDetailsPage() {
 
   const fetchExpenses = async () => {
     const data = await getModelExpenses(modelId);
-    console.log("Fetched expenses:", data);
-
     const jobExpenses = data.filter(
       (expense) => expense.jobId === Number(jobId)
     );
-    console.log("Filtered job expenses:", jobExpenses);
     setExpenses(jobExpenses);
   };
 
