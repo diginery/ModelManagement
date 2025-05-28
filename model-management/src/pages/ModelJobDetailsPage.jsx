@@ -34,8 +34,6 @@ export default function ModelJobDetailsPage() {
   }, [jobId]);
 
   const handleRemoveExpense = async (expenseId) => {
-    console.log("Removing expense with ID:", expenseId);
-
     await deleteExpense(expenseId);
     await fetchExpenses();
   };
